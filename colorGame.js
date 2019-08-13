@@ -40,6 +40,7 @@ hardBtn.addEventListener("click", function() {
 
 resetButton.addEventListener("click", function() {
 	//generate all new colors
+	messageDisplay.textContent = "";
 	colors = generateRandomColors(numSquares);
 	//pick a new random color from array
 	pickedColor = pickColor();
@@ -49,7 +50,7 @@ resetButton.addEventListener("click", function() {
 	for(var i = 0; i < squares.length; i++) {
 		squares[i].style.background = colors[i];
 	}
-	h1.style.background = "#232323";
+	h1.style.background = "steelBlue";
 });
 
 colorDisplay.textContent = pickedColor;
@@ -69,7 +70,7 @@ for(var i = 0; i < squares.length; i++){
 			changeColors(clickedColor);
 			h1.style.background = clickedColor;
 		} else {
-			this.style.background = "#232323";
+			this.style.background = "steelblue";
 			messageDisplay.textContent = "Try Again";
 		}
 	});
